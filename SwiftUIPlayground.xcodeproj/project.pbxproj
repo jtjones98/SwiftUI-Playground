@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		AF340C532F649A7A00E26C39 /* SwiftUIPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF340C532F649A7A00E26C39 /* WeatherCleanMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherCleanMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		AF340C552F649A7A00E26C39 /* SwiftUIPlayground */ = {
+		AF340C552F649A7A00E26C39 /* WeatherCleanMVVM */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SwiftUIPlayground;
+			path = WeatherCleanMVVM;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		AF340C4A2F649A7A00E26C39 = {
 			isa = PBXGroup;
 			children = (
-				AF340C552F649A7A00E26C39 /* SwiftUIPlayground */,
+				AF340C552F649A7A00E26C39 /* WeatherCleanMVVM */,
 				AF340C542F649A7A00E26C39 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		AF340C542F649A7A00E26C39 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF340C532F649A7A00E26C39 /* SwiftUIPlayground.app */,
+				AF340C532F649A7A00E26C39 /* WeatherCleanMVVM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF340C522F649A7A00E26C39 /* SwiftUIPlayground */ = {
+		AF340C522F649A7A00E26C39 /* WeatherCleanMVVM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF340C5E2F649A7B00E26C39 /* Build configuration list for PBXNativeTarget "SwiftUIPlayground" */;
+			buildConfigurationList = AF340C5E2F649A7B00E26C39 /* Build configuration list for PBXNativeTarget "WeatherCleanMVVM" */;
 			buildPhases = (
 				AF340C4F2F649A7A00E26C39 /* Sources */,
 				AF340C502F649A7A00E26C39 /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				AF340C552F649A7A00E26C39 /* SwiftUIPlayground */,
+				AF340C552F649A7A00E26C39 /* WeatherCleanMVVM */,
 			);
-			name = SwiftUIPlayground;
+			name = WeatherCleanMVVM;
 			packageProductDependencies = (
 			);
 			productName = SwiftUIPlayground;
-			productReference = AF340C532F649A7A00E26C39 /* SwiftUIPlayground.app */;
+			productReference = AF340C532F649A7A00E26C39 /* WeatherCleanMVVM.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF340C522F649A7A00E26C39 /* SwiftUIPlayground */,
+				AF340C522F649A7A00E26C39 /* WeatherCleanMVVM */,
 			);
 		};
 /* End PBXProject section */
@@ -318,7 +318,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF340C5E2F649A7B00E26C39 /* Build configuration list for PBXNativeTarget "SwiftUIPlayground" */ = {
+		AF340C5E2F649A7B00E26C39 /* Build configuration list for PBXNativeTarget "WeatherCleanMVVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF340C5F2F649A7B00E26C39 /* Debug */,
