@@ -1,6 +1,6 @@
 //
 //  WeatherViewModel.swift
-//  WeatherCleanMVVM
+//  WeatherAsyncStream
 //
 //  Created by John Jones on 3/13/26.
 //
@@ -23,8 +23,9 @@ final class WeatherViewModel {
     
     func fetchWeather(for location: String) async {
         do {
-            let weather = try await fetchWeatherUseCase.fetchWeather(for: location)
-            weathers.append(weather)
+            for try await weather in fetchWeatherUseCase.fetchWeather(for: location) {
+                weathers.append(weather)
+            }
         } catch {
             print("View Model unable to fetch weather: \(error.localizedDescription)")
         }

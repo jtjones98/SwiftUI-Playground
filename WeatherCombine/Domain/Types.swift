@@ -1,6 +1,6 @@
 //
 //  Types.swift
-//  WeatherCleanMVVM
+//  WeatherCombine
 //
 //  Created by John Jones on 3/13/26.
 //
