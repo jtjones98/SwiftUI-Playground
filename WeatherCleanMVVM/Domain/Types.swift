@@ -13,6 +13,16 @@ struct Weather: Identifiable {
     let temperature: String
 }
 
-enum WeatherError: Error {
+enum WeatherError: Error, LocalizedError {
     case locationNotFound
+    case networkFailure(String)
+    
+    var errorDescription: String? {
+        switch self {
+        case .locationNotFound:
+            "Location not found"
+        case .networkFailure(let message):
+            message
+        }
+    }
 }

@@ -25,8 +25,6 @@ final class WeatherViewModel {
         do {
             let weather = try await fetchWeatherUseCase.fetchWeather(for: location)
             weathers.append(weather)
-        } catch let error as NetworkError {
-            print("View Model unable to fetch weather: \(error.debugDescription)")
         } catch {
             print("View Model unable to fetch weather: \(error.localizedDescription)")
         }

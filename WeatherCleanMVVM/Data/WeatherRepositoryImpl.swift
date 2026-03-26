@@ -16,19 +16,23 @@ final class WeatherRepositoryImpl: WeatherRepository {
     }
     
     func fetchWeather(for location: String) async throws -> Weather {
-        let geoEndpoint: WeatherEndpoint = .geocode(city: location)
-        let geoResponse: GeoResponse = try await networkManager.request(endpoint: geoEndpoint)
-        
-        if let result = geoResponse.results.first {
+        do {
+            let geoEndpoint: WeatherEndpoint = .geocode(city: location)
+            let geoResponse: GeoResponse = try await networkManager.request(endpoint: geoEndpoint)
+            
+            guard let result = geoResponse.results.first else {
+                throw WeatherError.locationNotFound
+            }
+            
             let (lat, lon) = (result.latitude, result.longitude)
-            
             let weatherEndpoint: WeatherEndpoint = .weather(lat: lat, lon: lon)
-            
             let weatherResponse: WeatherResponse = try await networkManager.request(endpoint: weatherEndpoint)
-            let weather = Weather(location: location, temperature: "\(weatherResponse.current.temp)")
-            return weather
-        } else {
-            throw WeatherError.locationNotFound
+            
+            return Weather(location: location, temperature: "\(weatherResponse.current.temp)")
+        } catch let error as WeatherError {
+            throw error
+        } catch {
+            throw WeatherError.networkFailure(error.localizedDescription)
         }
     }
 }
